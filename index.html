@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>amon·hen — the Seat of Seeing</title>
+<meta name="description" content="A self-refreshing dashboard that watches my active projects — curated intent fused with live GitHub stats.">
+<style>
+  :root {
+    --ground:   #0b1220;
+    --ground-2: #0e1729;
+    --surface:  #14203a;
+    --surface-2:#182741;
+    --line:     #263455;
+    --line-soft:#1b2740;
+    --ink:      #ece8de;
+    --ink-dim:  #b9c1d4;
+    --muted:    #828faa;
+    --faint:    #5a668a;
+    --beacon:   #eaa24d;
+    --beacon-hi:#f4c581;
+    --terrain:  #4fb3ba;
+    --ok:       #5fbf88;
+    --warn:     #d9a441;
+    --idle:     #5b6a8c;
+    --down:     #d9705f;
+
+    --serif: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    --sans:  system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono:  ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+
+    --maxw: 1160px;
+    --r: 14px;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--ground);
+    line-height: 1.55;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  #sky { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; display: block; pointer-events: none; }
+  .wrap { position: relative; z-index: 1; max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+  a { color: var(--beacon); text-decoration: none; }
+  a:hover { color: var(--beacon-hi); }
+  :focus-visible { outline: 2px solid var(--beacon); outline-offset: 3px; border-radius: 4px; }
+
+  /* ---------- hero ---------- */
+  .hero {
+    position: relative;
+    padding: 92px 0 40px;
+    background:
+      radial-gradient(1200px 520px at 50% -140px, rgba(234,162,77,0.13), transparent 60%),
+      linear-gradient(180deg, rgba(8,13,24,0) 0%, rgba(8,13,24,0.55) 100%);
+  }
+  .brand { display: flex; align-items: center; gap: 15px; }
+  .brand svg { width: 44px; height: 44px; flex: none; filter: drop-shadow(0 0 14px rgba(234,162,77,0.5)); }
+  .wordmark { font-family: var(--serif); font-size: clamp(30px, 5.2vw, 46px); letter-spacing: 0.01em; margin: 0; font-weight: 500; color: var(--ink); }
+  .wordmark .dot { color: var(--beacon); }
+  .eyebrow { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--beacon); margin: 0 0 6px 2px; }
+  .lede { font-family: var(--serif); font-style: italic; font-size: clamp(17px, 2.4vw, 21px); color: var(--ink-dim); max-width: 46ch; margin: 22px 0 0; text-wrap: balance; line-height: 1.5; }
+  .status-strip { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin-top: 26px; font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
+  .status-strip .live { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); }
+  .pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--ok); box-shadow: 0 0 0 0 rgba(95,191,136,0.6); animation: pulse 2.6s ease-out infinite; }
+  @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(95,191,136,0.55); } 70% { box-shadow: 0 0 0 7px rgba(95,191,136,0); } 100% { box-shadow: 0 0 0 0 rgba(95,191,136,0); } }
+  .status-strip .sep { color: var(--faint); }
+
+  /* ---------- survey / aggregate ---------- */
+  .survey { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin: 40px 0 8px; background: var(--line-soft); border: 1px solid var(--line-soft); border-radius: var(--r); overflow: hidden; }
+  .stat { background: linear-gradient(180deg, var(--ground-2), var(--ground)); padding: 20px 22px 18px; }
+  .stat .n { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: clamp(26px, 3.6vw, 34px); color: var(--ink); line-height: 1; letter-spacing: -0.01em; }
+  .stat .n .u { font-size: 0.5em; color: var(--muted); margin-left: 4px; letter-spacing: 0; }
+  .stat .k { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-top: 10px; }
+
+  /* ---------- section heading ---------- */
+  .rule { display: flex; align-items: baseline; gap: 14px; margin: 46px 0 20px; }
+  .rule h2 { font-family: var(--serif); font-weight: 500; font-size: 19px; margin: 0; color: var(--ink); white-space: nowrap; }
+  .rule .line { flex: 1; height: 1px; background: linear-gradient(90deg, var(--line), transparent); }
+  .rule .count { font-family: var(--mono); font-size: 12px; color: var(--faint); }
+
+  /* ---------- grid ---------- */
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; padding-bottom: 8px; }
+  .card {
+    position: relative;
+    background:
+      radial-gradient(600px 300px at 100% 0, rgba(79,179,186,0.06), transparent 55%),
+      linear-gradient(180deg, var(--surface), var(--surface-2));
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    padding: 22px 22px 20px;
+    display: flex; flex-direction: column; gap: 14px;
+    transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  }
+  .card:hover { transform: translateY(-3px); border-color: #33456f; box-shadow: 0 18px 40px -22px rgba(0,0,0,0.8); }
+  .card.featured { grid-column: span 2; }
+  .card.featured::before {
+    content: ""; position: absolute; inset: 0; border-radius: var(--r); padding: 1px;
+    background: linear-gradient(120deg, rgba(234,162,77,0.55), rgba(234,162,77,0) 45%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;
+  }
+  /* whole-card link: the project name stretches over the card; inner links sit above it */
+  .stretch::after { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: var(--r); }
+  .card :where(a):not(.stretch), .card .readout a, .tags a { position: relative; z-index: 2; }
+
+  .card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+  .name-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .pname { font-family: var(--serif); font-size: 22px; font-weight: 500; margin: 0; letter-spacing: 0.01em; }
+  .pname a.stretch { color: var(--ink); }
+  .card:hover .pname a.stretch { color: var(--beacon-hi); }
+  .card.featured .pname { font-size: 27px; }
+  .beacon-tag { font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--beacon); border: 1px solid rgba(234,162,77,0.4); border-radius: 999px; padding: 2px 9px; display: inline-flex; align-items: center; gap: 5px; }
+  .lang { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 12px; color: var(--ink-dim); }
+  .lang .swatch { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+  .tagline { font-size: 14.5px; color: var(--ink-dim); margin: 0; max-width: 62ch; }
+  .card.featured .tagline { font-size: 15.5px; }
+
+  .chart-wrap { position: relative; }
+  .chart { display: block; width: 100%; height: 54px; }
+  .card.featured .chart { height: 74px; }
+  .chart-cap { display: flex; justify-content: space-between; align-items: baseline; font-family: var(--mono); font-size: 10.5px; color: var(--faint); letter-spacing: 0.12em; text-transform: uppercase; margin-top: 6px; }
+  .chart-cap b { color: var(--terrain); font-weight: 500; }
+
+  .readout { display: flex; flex-wrap: wrap; gap: 8px 20px; font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 12.5px; color: var(--muted); padding-top: 4px; border-top: 1px solid var(--line-soft); }
+  .readout .m { color: var(--ink); }
+  .readout .lbl { color: var(--faint); }
+  .readout a { color: inherit; }
+  .readout a:hover { color: var(--beacon); text-decoration: underline; }
+  .readout a:hover .m { color: var(--beacon); }
+  .ci { display: inline-flex; align-items: center; gap: 6px; }
+  .ci .d { width: 7px; height: 7px; border-radius: 50%; }
+  .ci.ok    { color: var(--ok); }   .ci.ok .d    { background: var(--ok); box-shadow: 0 0 8px rgba(95,191,136,.6); }
+  .ci.warn  { color: var(--warn); } .ci.warn .d  { background: var(--warn); }
+  .ci.idle  { color: var(--idle); } .ci.idle .d  { background: var(--idle); }
+  .ci.down  { color: var(--down); } .ci.down .d  { background: var(--down); }
+  a.ci:hover { filter: brightness(1.2); text-decoration: underline; }
+
+  .intent { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .card.featured .intent { max-width: 720px; }
+  .intent .cell .k { font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--beacon); margin-bottom: 3px; }
+  .intent .cell.next .k { color: var(--terrain); }
+  .intent .cell .v { font-size: 13.5px; color: var(--ink); line-height: 1.4; }
+
+  .foot-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 2px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag { font-family: var(--mono); font-size: 11px; color: var(--muted); background: rgba(255,255,255,0.03); border: 1px solid var(--line-soft); padding: 2px 8px; border-radius: 6px; }
+  a.tag:hover { color: var(--beacon); border-color: rgba(234,162,77,0.5); }
+  .repo-link { font-family: var(--mono); font-size: 12px; display: inline-flex; align-items: center; gap: 5px; }
+  .repo-link .arw { transition: transform .18s ease; }
+  .repo-link:hover .arw { transform: translate(2px,-2px); }
+  .stale-badge { font-family: var(--mono); font-size: 10.5px; color: var(--warn); border: 1px solid rgba(217,164,65,0.4); border-radius: 999px; padding: 1px 8px; }
+
+  /* ---------- states ---------- */
+  .state { font-family: var(--mono); font-size: 13px; color: var(--muted); padding: 60px 0; text-align: center; }
+  .state.err { color: var(--down); }
+
+  /* ---------- footer ---------- */
+  .site-foot { margin: 60px 0 48px; padding-top: 26px; border-top: 1px solid var(--line-soft); display: flex; flex-wrap: wrap; gap: 18px 40px; align-items: flex-start; justify-content: space-between; }
+  .site-foot p { margin: 0; font-size: 13px; color: var(--muted); max-width: 58ch; }
+  .site-foot .how { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--faint); margin-bottom: 8px; }
+  .site-foot code { font-family: var(--mono); font-size: 12px; color: var(--ink-dim); }
+
+  @media (max-width: 760px) {
+    .survey { grid-template-columns: repeat(2, 1fr); }
+    .grid { grid-template-columns: 1fr; }
+    .card.featured { grid-column: span 1; }
+    .hero { padding-top: 64px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .pulse { animation: none; }
+    .card { transition: none; }
+  }
+</style>
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="brand">
+      <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <circle cx="24" cy="15" r="7.5" fill="#eaa24d"/>
+        <circle cx="24" cy="15" r="7.5" fill="url(#g)"/>
+        <path d="M4 42 L20 18 L28 30 L34 22 L44 42 Z" fill="#14203a" stroke="#33456f" stroke-width="1.2" stroke-linejoin="round"/>
+        <path d="M4 42 L20 18 L28 30 L34 22 L44 42" fill="none" stroke="#4fb3ba" stroke-width="1" opacity="0.5" stroke-linejoin="round"/>
+        <defs><radialGradient id="g" cx="0.5" cy="0.35" r="0.7">
+          <stop offset="0" stop-color="#f7d9a6"/><stop offset="1" stop-color="#eaa24d" stop-opacity="0"/>
+        </radialGradient></defs>
+      </svg>
+      <div>
+        <p class="eyebrow">The Seat of Seeing</p>
+        <h1 class="wordmark">amon<span class="dot">·</span>hen</h1>
+      </div>
+    </div>
+
+    <p class="lede">The summit from which I watch everything I'm building — curated intent fused with live GitHub stats, refreshed while I sleep.</p>
+
+    <div class="status-strip" id="statusStrip"></div>
+  </header>
+
+  <section class="survey" id="survey" aria-label="Portfolio summary"></section>
+
+  <div class="rule">
+    <h2>Watched lands</h2>
+    <span class="line"></span>
+    <span class="count" id="landCount"></span>
+  </div>
+
+  <main class="grid" id="grid" aria-live="polite">
+    <div class="state" id="state">Reading the snapshot…</div>
+  </main>
+
+  <footer class="site-foot">
+    <div>
+      <div class="how">How the seat sees</div>
+      <p>A Rust CLI reads each repo through the GitHub API once a day, fuses the live numbers with a hand-curated <em>now / next</em>, and rewrites this surface from a single <code>snapshot.json</code>. The daily green run in the Actions tab is the proof it's still watching.</p>
+    </div>
+    <div><a class="repo-link" href="https://github.com/Ahacad/amon-hen" target="_blank" rel="noopener">source ↗</a></div>
+  </footer>
+</div>
+
+<script>
+  const GH = "https://github.com/";
+  const LANG_COLOR = { Rust:"#dea584", TypeScript:"#3178c6", JavaScript:"#f1e05a", Shell:"#89e051", Go:"#00add8", Python:"#3572A5", HTML:"#e34c26", CSS:"#563d7c", Nix:"#7e7eff" };
+  const CI_MAP = {
+    passing: { cls:"ok",   label:"CI passing" },
+    failing: { cls:"down", label:"CI failing" },
+    unknown: { cls:"idle", label:"no CI" },
+  };
+  const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[c]));
+
+  let REF = Date.now();
+  function ago(iso) {
+    if (!iso) return "—";
+    const d = Math.max(0, REF - Date.parse(iso));
+    const h = Math.round(d / 3.6e6);
+    if (h < 1)  return "just now";
+    if (h < 24) return h + "h ago";
+    return Math.round(h / 24) + "d ago";
+  }
+
+  // 12-week activity → filled light-curve SVG: faint mid grid, area fill, emphasized endpoint.
+  function chart(act, w, h) {
+    act = (act && act.length) ? act : [0, 0];
+    const pad = 3, n = act.length, max = Math.max(1, ...act);
+    const x = i => pad + (i / (n - 1)) * (w - pad * 2);
+    const y = v => (h - pad) - (v / max) * (h - pad * 2);
+    const pts = act.map((v, i) => [x(i), y(v)]);
+    const line = pts.map((p, i) => (i ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1)).join(" ");
+    const area = line + ` L${(w - pad).toFixed(1)} ${h - pad} L${pad} ${h - pad} Z`;
+    const end = pts[n - 1];
+    const grid = `<line x1="${pad}" x2="${w - pad}" y1="${(h * 0.5).toFixed(1)}" y2="${(h * 0.5).toFixed(1)}" stroke="#26344f" stroke-width="0.6" stroke-dasharray="2 3"/>`;
+    return `<svg class="chart" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" role="img" aria-label="12-week commit activity">
+      <defs><linearGradient id="t${w}" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0" stop-color="#4fb3ba" stop-opacity="0.42"/><stop offset="1" stop-color="#4fb3ba" stop-opacity="0.02"/>
+      </linearGradient></defs>
+      ${grid}
+      <path d="${area}" fill="url(#t${w})"/>
+      <path d="${line}" fill="none" stroke="#63c7ce" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="${end[0].toFixed(1)}" cy="${end[1].toFixed(1)}" r="2.8" fill="#eaa24d"/>
+      <circle cx="${end[0].toFixed(1)}" cy="${end[1].toFixed(1)}" r="5" fill="#eaa24d" opacity="0.22"/>
+    </svg>`;
+  }
+
+  // A repo link is rendered only when `p.url` is set — public repos. Private
+  // repos show the same facts as plain text (a link would 404 and leak the path).
+  function card(p) {
+    const featured = !!p.featured;
+    const ci = CI_MAP[p.ci] || CI_MAP.unknown;
+    const lc = LANG_COLOR[p.language] || "#8793aa";
+    const act = p.activity_12w || [];
+    const peak = act.length ? Math.max(...act) : 0;
+    const url = p.url || null;
+    const lang = p.language ? `<span class="lang"><span class="swatch" style="background:${lc}"></span>${esc(p.language)}</span>` : "";
+    const beacon = featured ? `<span class="beacon-tag">◆ featured</span>` : "";
+    const stale = p.stale ? `<span class="stale-badge">⚠ stale · ${esc(ago(p.updated))}</span>` : "";
+    const link = (href, inner) => url ? `<a href="${url}${href}">${inner}</a>` : `<span>${inner}</span>`;
+
+    const name = url
+      ? `<a class="stretch" href="${url}">${esc(p.name)}</a>`
+      : `<span>${esc(p.name)}</span>`;
+    const commits = link("/commits", `<span class="m">${p.total_commits ?? "—"}</span> <span class="lbl">commits</span>`);
+    const pushed  = link("/commits", `<span class="lbl">pushed</span> <span class="m">${esc(ago(p.updated))}</span>`);
+    const rel = p.release
+      ? link(`/releases/tag/${encodeURIComponent(p.release)}`, `<span class="lbl">rel</span> <span class="m">${esc(p.release)}</span>`)
+      : "";
+    const ciLink = url
+      ? `<a class="ci ${ci.cls}" href="${url}/actions"><span class="d"></span>${ci.label}</a>`
+      : `<span class="ci ${ci.cls}"><span class="d"></span>${ci.label}</span>`;
+
+    return `<article class="card${featured ? " featured" : ""}">
+      <div class="card-head">
+        <div class="name-row">
+          <h3 class="pname">${name}</h3>
+          ${beacon}${stale}
+        </div>
+        ${lang}
+      </div>
+      <p class="tagline">${esc(p.tagline)}</p>
+
+      <div class="chart-wrap">
+        ${chart(act, featured ? 640 : 300, featured ? 74 : 54)}
+        <div class="chart-cap"><span>12-week activity</span><span><b>${p.recent_commits ?? 0}</b> commits · 30d · peak ${peak}/wk</span></div>
+      </div>
+
+      <div class="readout">
+        ${commits}
+        ${pushed}
+        ${rel}
+        ${ciLink}
+      </div>
+
+      <div class="intent">
+        <div class="cell now"><div class="k">Now</div><div class="v">${esc(p.now)}</div></div>
+        <div class="cell next"><div class="k">Next</div><div class="v">${esc(p.next)}</div></div>
+      </div>
+
+      <div class="foot-row">
+        <div class="tags">${(p.tags || []).map(t => `<a class="tag" href="${GH}topics/${encodeURIComponent(t)}">${esc(t)}</a>`).join("")}</div>
+        ${url ? `<a class="repo-link" href="${url}">repo <span class="arw">↗</span></a>` : ""}
+      </div>
+    </article>`;
+  }
+
+  function render(snap) {
+    const P = snap.projects || [];
+    REF = Date.parse(snap.generated_at) || Date.now();
+    const sum = k => P.reduce((a, p) => a + (p[k] || 0), 0);
+    const passing = P.filter(p => p.ci === "passing").length;
+    const featured = P.filter(p => p.featured).length;
+
+    document.getElementById("survey").innerHTML = [
+      [P.length, "", "lands watched"],
+      [sum("recent_commits"), "", "commits · last 30d"],
+      [sum("total_commits"), "", "commits all-time"],
+      [passing, `<span class="u">/ ${P.length}</span>`, "CI passing"],
+    ].map(([n, u, k]) => `<div class="stat"><div class="n">${n}${u}</div><div class="k">${k}</div></div>`).join("");
+
+    const when = new Date(REF);
+    const stamp = isNaN(when) ? "" : when.toISOString().slice(0, 16).replace("T", " ") + " UTC";
+    document.getElementById("statusStrip").innerHTML =
+      `<span class="live"><span class="pulse"></span>all systems live</span>
+       <span class="sep">·</span><span>${P.length} projects tracked</span>
+       <span class="sep">·</span><span>refreshed ${stamp}</span>
+       <span class="sep">·</span><span>next refresh 06:00 UTC daily</span>`;
+
+    document.getElementById("landCount").textContent = `${P.length} repos${featured ? ` · ${featured} featured` : ""}`;
+    document.getElementById("grid").innerHTML = P.map(card).join("");
+  }
+
+  fetch("./snapshot.json", { cache: "no-cache" })
+    .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+    .then(render)
+    .catch(e => {
+      document.getElementById("grid").innerHTML =
+        `<div class="state err">Couldn't read snapshot.json — ${esc(e.message)}. The daily refresh writes it; check the Actions tab.</div>`;
+    });
+
+  // ---- ambient night sky ----
+  (function () {
+    const c = document.getElementById("sky"), x = c.getContext("2d");
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let stars = [], W, H, raf;
+    function seed() {
+      const dpr = Math.min(2, devicePixelRatio || 1);
+      W = c.width = innerWidth * dpr; H = c.height = innerHeight * dpr;
+      c.style.width = innerWidth + "px"; c.style.height = innerHeight + "px";
+      const count = Math.min(150, Math.floor(innerWidth * innerHeight / 14000));
+      stars = Array.from({ length: count }, (_, i) => ({
+        x: Math.random() * W, y: Math.random() * H * 0.9,
+        r: Math.random() * 1.3 * dpr + 0.3 * dpr,
+        base: Math.random() * 0.5 + 0.15,
+        beacon: i % 17 === 0, ph: Math.random() * Math.PI * 2, sp: Math.random() * 0.7 + 0.3,
+      }));
+    }
+    function frame(t) {
+      x.clearRect(0, 0, W, H);
+      const time = t * 0.001;
+      for (const s of stars) {
+        const tw = reduce ? s.base : s.base + Math.sin(time * s.sp + s.ph) * 0.18;
+        x.beginPath(); x.arc(s.x, s.y, s.r, 0, 7);
+        if (s.beacon) { x.fillStyle = `rgba(234,162,77,${Math.max(0, tw + 0.15)})`; x.shadowBlur = 8; x.shadowColor = "rgba(234,162,77,0.7)"; }
+        else { x.fillStyle = `rgba(190,205,235,${Math.max(0, tw)})`; x.shadowBlur = 0; }
+        x.fill();
+      }
+      x.shadowBlur = 0;
+      if (!reduce) raf = requestAnimationFrame(frame);
+    }
+    seed(); frame(0);
+    addEventListener("resize", () => { cancelAnimationFrame(raf); seed(); frame(0); });
+  })();
+</script>
+</body>
+</html>
