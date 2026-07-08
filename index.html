@@ -246,7 +246,9 @@
 
   // 12-week activity → filled light-curve SVG: faint mid grid, area fill, emphasized endpoint.
   function chart(act, w, h) {
-    act = (act && act.length) ? act : [0, 0];
+    // Need ≥2 points for the x-scale (divides by n-1); pad the degenerate cases.
+    act = (act && act.length >= 2) ? act
+        : (act && act.length === 1) ? [act[0], act[0]] : [0, 0];
     const pad = 3, n = act.length, max = Math.max(1, ...act);
     const x = i => pad + (i / (n - 1)) * (w - pad * 2);
     const y = v => (h - pad) - (v / max) * (h - pad * 2);
@@ -276,13 +278,14 @@
     const act = p.activity_12w || [];
     const peak = act.length ? Math.max(...act) : 0;
     const url = p.url || null;
+    const u = url ? esc(url) : "";   // attribute-safe form for hrefs
     const lang = p.language ? `<span class="lang"><span class="swatch" style="background:${lc}"></span>${esc(p.language)}</span>` : "";
     const beacon = featured ? `<span class="beacon-tag">◆ featured</span>` : "";
     const stale = p.stale ? `<span class="stale-badge">⚠ stale · ${esc(ago(p.updated))}</span>` : "";
-    const link = (href, inner) => url ? `<a href="${url}${href}">${inner}</a>` : `<span>${inner}</span>`;
+    const link = (path, inner) => url ? `<a href="${u}${path}">${inner}</a>` : `<span>${inner}</span>`;
 
     const name = url
-      ? `<a class="stretch" href="${url}">${esc(p.name)}</a>`
+      ? `<a class="stretch" href="${u}">${esc(p.name)}</a>`
       : `<span>${esc(p.name)}</span>`;
     const commits = link("/commits", `<span class="m">${p.total_commits ?? "—"}</span> <span class="lbl">commits</span>`);
     const pushed  = link("/commits", `<span class="lbl">pushed</span> <span class="m">${esc(ago(p.updated))}</span>`);
@@ -290,7 +293,7 @@
       ? link(`/releases/tag/${encodeURIComponent(p.release)}`, `<span class="lbl">rel</span> <span class="m">${esc(p.release)}</span>`)
       : "";
     const ciLink = url
-      ? `<a class="ci ${ci.cls}" href="${url}/actions"><span class="d"></span>${ci.label}</a>`
+      ? `<a class="ci ${ci.cls}" href="${u}/actions"><span class="d"></span>${ci.label}</a>`
       : `<span class="ci ${ci.cls}"><span class="d"></span>${ci.label}</span>`;
 
     return `<article class="card${featured ? " featured" : ""}">
@@ -322,7 +325,7 @@
 
       <div class="foot-row">
         <div class="tags">${(p.tags || []).map(t => `<a class="tag" href="${GH}topics/${encodeURIComponent(t)}">${esc(t)}</a>`).join("")}</div>
-        ${url ? `<a class="repo-link" href="${url}">repo <span class="arw">↗</span></a>` : ""}
+        ${url ? `<a class="repo-link" href="${u}">repo <span class="arw">↗</span></a>` : ""}
       </div>
     </article>`;
   }
