@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-08T08:18:47.105305330Z",
+  "generated_at": "2026-07-09T09:29:53.819580613Z",
   "projects": [
     {
       "name": "simledge",
@@ -48,8 +48,8 @@
         "config"
       ],
       "language": "JavaScript",
-      "total_commits": 322,
-      "recent_commits": 154,
+      "total_commits": 324,
+      "recent_commits": 144,
       "activity_12w": [
         3,
         9,
@@ -62,11 +62,46 @@
         66,
         20,
         11,
-        14
+        16
       ],
       "ci": "unknown",
       "release": null,
-      "updated": "2026-07-08T01:13:21Z",
+      "updated": "2026-07-08T23:10:16Z",
+      "stale": false,
+      "featured": false,
+      "url": null
+    },
+    {
+      "name": "amon-hen",
+      "tagline": "The Seat of Seeing — a self-refreshing dashboard that watches my active projects.",
+      "now": "Phase 1: collector + renderer",
+      "next": "Promote to profile README; Pages site",
+      "tags": [
+        "rust",
+        "cli",
+        "github-api",
+        "meta"
+      ],
+      "language": "Rust",
+      "total_commits": 5,
+      "recent_commits": 5,
+      "activity_12w": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5
+      ],
+      "ci": "passing",
+      "release": null,
+      "updated": "2026-07-08T08:19:10Z",
       "stale": false,
       "featured": false,
       "url": null
@@ -84,7 +119,7 @@
       ],
       "language": "Shell",
       "total_commits": 101,
-      "recent_commits": 77,
+      "recent_commits": 72,
       "activity_12w": [
         0,
         0,
@@ -102,41 +137,6 @@
       "ci": "unknown",
       "release": null,
       "updated": "2026-07-08T01:13:06Z",
-      "stale": false,
-      "featured": false,
-      "url": null
-    },
-    {
-      "name": "amon-hen",
-      "tagline": "The Seat of Seeing — a self-refreshing dashboard that watches my active projects.",
-      "now": "Phase 1: collector + renderer",
-      "next": "Promote to profile README; Pages site",
-      "tags": [
-        "rust",
-        "cli",
-        "github-api",
-        "meta"
-      ],
-      "language": "Rust",
-      "total_commits": 4,
-      "recent_commits": 4,
-      "activity_12w": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        4
-      ],
-      "ci": "passing",
-      "release": null,
-      "updated": "2026-07-07T10:36:51Z",
       "stale": false,
       "featured": false,
       "url": null
