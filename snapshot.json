@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T07:47:45.594300402Z",
+  "generated_at": "2026-07-12T08:08:47.088216556Z",
   "projects": [
     {
       "name": "simledge",
@@ -17,7 +17,6 @@
       "recent_commits": 317,
       "activity_12w": [
         0,
-        0,
         70,
         14,
         19,
@@ -27,13 +26,49 @@
         134,
         87,
         56,
-        2
+        2,
+        0
       ],
       "ci": "passing",
       "release": "v0.8.0",
       "updated": "2026-07-06T03:46:03Z",
       "stale": false,
       "featured": true,
+      "url": null
+    },
+    {
+      "name": "amon-hen",
+      "tagline": "The Seat of Seeing — a self-refreshing dashboard that watches my active projects.",
+      "now": "Phase 1: collector + renderer",
+      "next": "Promote to profile README; Pages site",
+      "tags": [
+        "rust",
+        "cli",
+        "github-api",
+        "meta"
+      ],
+      "language": "Rust",
+      "total_commits": 8,
+      "recent_commits": 8,
+      "activity_12w": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        0
+      ],
+      "ci": "passing",
+      "release": null,
+      "updated": "2026-07-11T07:48:07Z",
+      "stale": false,
+      "featured": false,
       "url": null
     },
     {
@@ -52,7 +87,6 @@
       "recent_commits": 66,
       "activity_12w": [
         0,
-        0,
         1,
         3,
         0,
@@ -62,46 +96,12 @@
         16,
         12,
         6,
-        15
+        15,
+        0
       ],
       "ci": "unknown",
       "release": null,
       "updated": "2026-07-10T20:03:21Z",
-      "stale": false,
-      "featured": false,
-      "url": null
-    },
-    {
-      "name": "amon-hen",
-      "tagline": "The Seat of Seeing — a self-refreshing dashboard that watches my active projects.",
-      "now": "Phase 1: collector + renderer",
-      "next": "Promote to profile README; Pages site",
-      "tags": [
-        "rust",
-        "cli",
-        "github-api",
-        "meta"
-      ],
-      "language": "Rust",
-      "total_commits": 7,
-      "recent_commits": 7,
-      "activity_12w": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        7
-      ],
-      "ci": "passing",
-      "release": null,
-      "updated": "2026-07-10T09:27:58Z",
       "stale": false,
       "featured": false,
       "url": null
@@ -119,9 +119,8 @@
       ],
       "language": "JavaScript",
       "total_commits": 353,
-      "recent_commits": 163,
+      "recent_commits": 162,
       "activity_12w": [
-        3,
         9,
         5,
         5,
@@ -132,7 +131,8 @@
         66,
         20,
         11,
-        45
+        45,
+        0
       ],
       "ci": "unknown",
       "release": null,
@@ -164,9 +164,9 @@
         0,
         0,
         0,
-        0,
         44,
-        7
+        7,
+        0
       ],
       "ci": "passing",
       "release": null,
