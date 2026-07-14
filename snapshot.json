@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T08:59:24.512737214Z",
+  "generated_at": "2026-07-14T07:54:27.550079234Z",
   "projects": [
     {
       "name": "simledge",
@@ -13,8 +13,8 @@
         "local-first"
       ],
       "language": "Rust",
-      "total_commits": 421,
-      "recent_commits": 317,
+      "total_commits": 453,
+      "recent_commits": 349,
       "activity_12w": [
         0,
         70,
@@ -26,14 +26,48 @@
         134,
         87,
         56,
-        2,
-        0
+        11,
+        20
       ],
       "ci": "passing",
       "release": "v0.8.0",
-      "updated": "2026-07-06T03:46:03Z",
+      "updated": "2026-07-14T03:29:00Z",
       "stale": false,
       "featured": true,
+      "url": null
+    },
+    {
+      "name": "orthanc",
+      "tagline": "A palantír on Cloudflare's free tier — watches markets & news, alerts to Discord.",
+      "now": "More monitor adapters",
+      "next": "Alert de-duplication & digests",
+      "tags": [
+        "typescript",
+        "cloudflare-workers",
+        "monitoring"
+      ],
+      "language": "TypeScript",
+      "total_commits": 52,
+      "recent_commits": 52,
+      "activity_12w": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        44,
+        7,
+        1
+      ],
+      "ci": "passing",
+      "release": null,
+      "updated": "2026-07-14T07:51:59Z",
+      "stale": false,
+      "featured": false,
       "url": null
     },
     {
@@ -48,8 +82,8 @@
         "meta"
       ],
       "language": "Rust",
-      "total_commits": 9,
-      "recent_commits": 9,
+      "total_commits": 10,
+      "recent_commits": 10,
       "activity_12w": [
         0,
         0,
@@ -66,7 +100,7 @@
       ],
       "ci": "passing",
       "release": null,
-      "updated": "2026-07-12T08:09:11Z",
+      "updated": "2026-07-13T08:59:44Z",
       "stale": false,
       "featured": false,
       "url": null
@@ -119,7 +153,7 @@
       ],
       "language": "JavaScript",
       "total_commits": 353,
-      "recent_commits": 150,
+      "recent_commits": 143,
       "activity_12w": [
         9,
         5,
@@ -137,40 +171,6 @@
       "ci": "unknown",
       "release": null,
       "updated": "2026-07-10T03:16:20Z",
-      "stale": false,
-      "featured": false,
-      "url": null
-    },
-    {
-      "name": "orthanc",
-      "tagline": "A palantír on Cloudflare's free tier — watches markets & news, alerts to Discord.",
-      "now": "More monitor adapters",
-      "next": "Alert de-duplication & digests",
-      "tags": [
-        "typescript",
-        "cloudflare-workers",
-        "monitoring"
-      ],
-      "language": "TypeScript",
-      "total_commits": 51,
-      "recent_commits": 51,
-      "activity_12w": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        44,
-        7,
-        0
-      ],
-      "ci": "passing",
-      "release": null,
-      "updated": "2026-07-07T10:12:07Z",
       "stale": false,
       "featured": false,
       "url": null
