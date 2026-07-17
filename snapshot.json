@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-16T08:04:16.909954908Z",
+  "generated_at": "2026-07-17T08:02:36.903886616Z",
   "projects": [
     {
       "name": "simledge",
@@ -14,7 +14,7 @@
       ],
       "language": "Rust",
       "total_commits": 453,
-      "recent_commits": 348,
+      "recent_commits": 332,
       "activity_12w": [
         0,
         70,
@@ -48,8 +48,8 @@
         "shell"
       ],
       "language": "Shell",
-      "total_commits": 113,
-      "recent_commits": 56,
+      "total_commits": 118,
+      "recent_commits": 57,
       "activity_12w": [
         0,
         1,
@@ -62,11 +62,46 @@
         12,
         6,
         15,
-        10
+        15
       ],
       "ci": "unknown",
       "release": null,
-      "updated": "2026-07-15T23:32:42Z",
+      "updated": "2026-07-17T01:57:25Z",
+      "stale": false,
+      "featured": false,
+      "url": null
+    },
+    {
+      "name": "amon-hen",
+      "tagline": "The Seat of Seeing — a self-refreshing dashboard that watches my active projects.",
+      "now": "Phase 1: collector + renderer",
+      "next": "Promote to profile README; Pages site",
+      "tags": [
+        "rust",
+        "cli",
+        "github-api",
+        "meta"
+      ],
+      "language": "Rust",
+      "total_commits": 13,
+      "recent_commits": 13,
+      "activity_12w": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        5
+      ],
+      "ci": "passing",
+      "release": null,
+      "updated": "2026-07-16T08:04:45Z",
       "stale": false,
       "featured": false,
       "url": null
@@ -84,7 +119,7 @@
       ],
       "language": "JavaScript",
       "total_commits": 380,
-      "recent_commits": 158,
+      "recent_commits": 140,
       "activity_12w": [
         9,
         5,
@@ -102,41 +137,6 @@
       "ci": "unknown",
       "release": null,
       "updated": "2026-07-15T22:11:25Z",
-      "stale": false,
-      "featured": false,
-      "url": null
-    },
-    {
-      "name": "amon-hen",
-      "tagline": "The Seat of Seeing — a self-refreshing dashboard that watches my active projects.",
-      "now": "Phase 1: collector + renderer",
-      "next": "Promote to profile README; Pages site",
-      "tags": [
-        "rust",
-        "cli",
-        "github-api",
-        "meta"
-      ],
-      "language": "Rust",
-      "total_commits": 12,
-      "recent_commits": 12,
-      "activity_12w": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        8,
-        4
-      ],
-      "ci": "passing",
-      "release": null,
-      "updated": "2026-07-15T07:59:42Z",
       "stale": false,
       "featured": false,
       "url": null
