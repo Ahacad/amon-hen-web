@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-01T08:12:12.661517223Z",
+  "generated_at": "2026-08-02T08:13:20.646617279Z",
   "projects": [
     {
       "name": "simledge",
@@ -16,7 +16,6 @@
       "total_commits": 453,
       "recent_commits": 34,
       "activity_12w": [
-        14,
         19,
         0,
         0,
@@ -26,6 +25,7 @@
         56,
         11,
         20,
+        0,
         0,
         0
       ],
@@ -48,10 +48,9 @@
         "meta"
       ],
       "language": "Rust",
-      "total_commits": 28,
-      "recent_commits": 28,
+      "total_commits": 29,
+      "recent_commits": 29,
       "activity_12w": [
-        0,
         0,
         0,
         0,
@@ -62,11 +61,12 @@
         8,
         7,
         7,
-        6
+        7,
+        0
       ],
       "ci": "passing",
       "release": null,
-      "updated": "2026-07-31T08:42:19Z",
+      "updated": "2026-08-01T08:12:32Z",
       "stale": false,
       "featured": false,
       "url": null
@@ -86,7 +86,6 @@
       "total_commits": 123,
       "recent_commits": 35,
       "activity_12w": [
-        3,
         0,
         7,
         13,
@@ -97,6 +96,7 @@
         15,
         16,
         4,
+        0,
         0
       ],
       "ci": "unknown",
@@ -119,9 +119,8 @@
       ],
       "language": "JavaScript",
       "total_commits": 412,
-      "recent_commits": 105,
+      "recent_commits": 104,
       "activity_12w": [
-        5,
         3,
         53,
         21,
@@ -132,6 +131,7 @@
         45,
         40,
         19,
+        0,
         0
       ],
       "ci": "unknown",
@@ -153,9 +153,8 @@
       ],
       "language": "TypeScript",
       "total_commits": 53,
-      "recent_commits": 34,
+      "recent_commits": 9,
       "activity_12w": [
-        0,
         0,
         0,
         0,
@@ -165,6 +164,7 @@
         44,
         7,
         2,
+        0,
         0,
         0
       ],
