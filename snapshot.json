@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T06:37:08.258807212Z",
+  "generated_at": "2026-08-21T06:38:15.774242728Z",
   "projects": [
     {
       "name": "simledge",
@@ -37,41 +37,6 @@
       "url": null
     },
     {
-      "name": "amon-hen",
-      "tagline": "The Seat of Seeing — a self-refreshing dashboard that watches my active projects.",
-      "now": "Phase 1: collector + renderer",
-      "next": "Promote to profile README; Pages site",
-      "tags": [
-        "rust",
-        "cli",
-        "github-api",
-        "meta"
-      ],
-      "language": "Rust",
-      "total_commits": 47,
-      "recent_commits": 30,
-      "activity_12w": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        8,
-        7,
-        7,
-        7,
-        7,
-        7,
-        4
-      ],
-      "ci": "passing",
-      "release": null,
-      "updated": "2026-08-19T06:35:12Z",
-      "stale": false,
-      "featured": false,
-      "url": null
-    },
-    {
       "name": "nix-cdd",
       "tagline": "Bare Amazon dev-dsk → full environment in one shot — a from-scratch home-manager rebuild where code is the spec.",
       "now": "Rebuilding modules from scratch, one per session",
@@ -83,7 +48,7 @@
         "shell"
       ],
       "language": "Shell",
-      "total_commits": 141,
+      "total_commits": 142,
       "recent_commits": 21,
       "activity_12w": [
         13,
@@ -97,11 +62,46 @@
         1,
         6,
         7,
-        3
+        4
       ],
       "ci": "unknown",
       "release": null,
-      "updated": "2026-08-18T00:14:04Z",
+      "updated": "2026-08-20T18:42:10Z",
+      "stale": false,
+      "featured": false,
+      "url": null
+    },
+    {
+      "name": "amon-hen",
+      "tagline": "The Seat of Seeing — a self-refreshing dashboard that watches my active projects.",
+      "now": "Phase 1: collector + renderer",
+      "next": "Promote to profile README; Pages site",
+      "tags": [
+        "rust",
+        "cli",
+        "github-api",
+        "meta"
+      ],
+      "language": "Rust",
+      "total_commits": 48,
+      "recent_commits": 30,
+      "activity_12w": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        8,
+        7,
+        7,
+        7,
+        7,
+        7,
+        5
+      ],
+      "ci": "passing",
+      "release": null,
+      "updated": "2026-08-20T06:37:31Z",
       "stale": false,
       "featured": false,
       "url": null
@@ -153,7 +153,7 @@
       ],
       "language": "JavaScript",
       "total_commits": 443,
-      "recent_commits": 47,
+      "recent_commits": 41,
       "activity_12w": [
         21,
         38,
