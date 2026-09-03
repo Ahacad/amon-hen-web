@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T10:27:20.751241900Z",
+  "generated_at": "2026-09-03T10:33:52.945328613Z",
   "projects": [
     {
       "name": "simledge",
@@ -37,6 +37,41 @@
       "url": null
     },
     {
+      "name": "nix-cdd",
+      "tagline": "Bare Amazon dev-dsk → full environment in one shot — a from-scratch home-manager rebuild where code is the spec.",
+      "now": "Rebuilding modules from scratch, one per session",
+      "next": "One-shot bootstrap across every host",
+      "tags": [
+        "nix",
+        "home-manager",
+        "dotfiles",
+        "shell"
+      ],
+      "language": "Shell",
+      "total_commits": 182,
+      "recent_commits": 56,
+      "activity_12w": [
+        16,
+        12,
+        6,
+        15,
+        16,
+        5,
+        1,
+        6,
+        7,
+        6,
+        7,
+        31
+      ],
+      "ci": "unknown",
+      "release": null,
+      "updated": "2026-09-03T00:31:43Z",
+      "stale": false,
+      "featured": false,
+      "url": null
+    },
+    {
       "name": "amon-hen",
       "tagline": "The Seat of Seeing — a self-refreshing dashboard that watches my active projects.",
       "now": "Phase 1: collector + renderer",
@@ -48,7 +83,7 @@
         "meta"
       ],
       "language": "Rust",
-      "total_commits": 60,
+      "total_commits": 61,
       "recent_commits": 29,
       "activity_12w": [
         0,
@@ -62,46 +97,46 @@
         7,
         7,
         7,
-        3
+        4
       ],
       "ci": "passing",
       "release": null,
-      "updated": "2026-09-01T10:58:26Z",
+      "updated": "2026-09-02T10:27:39Z",
       "stale": false,
       "featured": false,
       "url": null
     },
     {
-      "name": "nix-cdd",
-      "tagline": "Bare Amazon dev-dsk → full environment in one shot — a from-scratch home-manager rebuild where code is the spec.",
-      "now": "Rebuilding modules from scratch, one per session",
-      "next": "One-shot bootstrap across every host",
+      "name": ".claude",
+      "tagline": "My Claude Code brain — agents, skills, hooks, and the SOUL that shapes how the assistant works.",
+      "now": "Curating agents & skills",
+      "next": "Shareable plugin bundles",
       "tags": [
-        "nix",
-        "home-manager",
+        "claude-code",
         "dotfiles",
-        "shell"
+        "agents",
+        "config"
       ],
-      "language": "Shell",
-      "total_commits": 142,
-      "recent_commits": 17,
+      "language": "Python",
+      "total_commits": 555,
+      "recent_commits": 109,
       "activity_12w": [
-        16,
-        12,
-        6,
-        15,
-        16,
-        5,
-        1,
-        6,
-        7,
-        4,
-        0,
-        0
+        66,
+        20,
+        11,
+        45,
+        40,
+        22,
+        23,
+        14,
+        10,
+        10,
+        49,
+        34
       ],
       "ci": "unknown",
       "release": null,
-      "updated": "2026-08-20T18:42:10Z",
+      "updated": "2026-09-01T17:18:11Z",
       "stale": false,
       "featured": false,
       "url": null
@@ -136,41 +171,6 @@
       "ci": "passing",
       "release": null,
       "updated": "2026-08-10T08:07:15Z",
-      "stale": false,
-      "featured": false,
-      "url": null
-    },
-    {
-      "name": ".claude",
-      "tagline": "My Claude Code brain — agents, skills, hooks, and the SOUL that shapes how the assistant works.",
-      "now": "Curating agents & skills",
-      "next": "Shareable plugin bundles",
-      "tags": [
-        "claude-code",
-        "dotfiles",
-        "agents",
-        "config"
-      ],
-      "language": "JavaScript",
-      "total_commits": 443,
-      "recent_commits": 5,
-      "activity_12w": [
-        66,
-        20,
-        11,
-        45,
-        40,
-        22,
-        23,
-        5,
-        0,
-        0,
-        0,
-        0
-      ],
-      "ci": "unknown",
-      "release": null,
-      "updated": "2026-08-03T23:33:13Z",
       "stale": false,
       "featured": false,
       "url": null
