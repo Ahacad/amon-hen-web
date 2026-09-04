@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T10:33:52.945328613Z",
+  "generated_at": "2026-09-04T10:26:21.102955792Z",
   "projects": [
     {
       "name": "simledge",
@@ -13,8 +13,8 @@
         "local-first"
       ],
       "language": "Rust",
-      "total_commits": 453,
-      "recent_commits": 0,
+      "total_commits": 489,
+      "recent_commits": 36,
       "activity_12w": [
         134,
         87,
@@ -23,17 +23,52 @@
         20,
         0,
         0,
-        0,
-        0,
+        2,
+        23,
         0,
         0,
         0
       ],
-      "ci": "passing",
+      "ci": "failing",
       "release": "v0.8.0",
-      "updated": "2026-07-14T03:29:00Z",
+      "updated": "2026-08-12T10:08:30Z",
       "stale": false,
       "featured": true,
+      "url": null
+    },
+    {
+      "name": "amon-hen",
+      "tagline": "The Seat of Seeing — a self-refreshing dashboard that watches my active projects.",
+      "now": "Phase 1: collector + renderer",
+      "next": "Promote to profile README; Pages site",
+      "tags": [
+        "rust",
+        "cli",
+        "github-api",
+        "meta"
+      ],
+      "language": "Rust",
+      "total_commits": 62,
+      "recent_commits": 29,
+      "activity_12w": [
+        0,
+        0,
+        0,
+        8,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        5
+      ],
+      "ci": "passing",
+      "release": null,
+      "updated": "2026-09-03T10:34:14Z",
+      "stale": false,
+      "featured": false,
       "url": null
     },
     {
@@ -67,41 +102,6 @@
       "ci": "unknown",
       "release": null,
       "updated": "2026-09-03T00:31:43Z",
-      "stale": false,
-      "featured": false,
-      "url": null
-    },
-    {
-      "name": "amon-hen",
-      "tagline": "The Seat of Seeing — a self-refreshing dashboard that watches my active projects.",
-      "now": "Phase 1: collector + renderer",
-      "next": "Promote to profile README; Pages site",
-      "tags": [
-        "rust",
-        "cli",
-        "github-api",
-        "meta"
-      ],
-      "language": "Rust",
-      "total_commits": 61,
-      "recent_commits": 29,
-      "activity_12w": [
-        0,
-        0,
-        0,
-        8,
-        7,
-        7,
-        7,
-        7,
-        7,
-        7,
-        7,
-        4
-      ],
-      "ci": "passing",
-      "release": null,
-      "updated": "2026-09-02T10:27:39Z",
       "stale": false,
       "featured": false,
       "url": null
