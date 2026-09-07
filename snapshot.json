@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T10:08:16.392854994Z",
+  "generated_at": "2026-09-07T11:23:24.489503837Z",
   "projects": [
     {
       "name": "simledge",
@@ -37,6 +37,41 @@
       "url": null
     },
     {
+      "name": "nix-cdd",
+      "tagline": "Bare Amazon dev-dsk → full environment in one shot — a from-scratch home-manager rebuild where code is the spec.",
+      "now": "Rebuilding modules from scratch, one per session",
+      "next": "One-shot bootstrap across every host",
+      "tags": [
+        "nix",
+        "home-manager",
+        "dotfiles",
+        "shell"
+      ],
+      "language": "Shell",
+      "total_commits": 209,
+      "recent_commits": 78,
+      "activity_12w": [
+        12,
+        6,
+        15,
+        16,
+        5,
+        1,
+        6,
+        7,
+        6,
+        7,
+        53,
+        5
+      ],
+      "ci": "unknown",
+      "release": null,
+      "updated": "2026-09-07T08:08:30Z",
+      "stale": false,
+      "featured": false,
+      "url": null
+    },
+    {
       "name": "amon-hen",
       "tagline": "The Seat of Seeing — a self-refreshing dashboard that watches my active projects.",
       "now": "Phase 1: collector + renderer",
@@ -48,7 +83,7 @@
         "meta"
       ],
       "language": "Rust",
-      "total_commits": 64,
+      "total_commits": 65,
       "recent_commits": 29,
       "activity_12w": [
         0,
@@ -62,46 +97,11 @@
         7,
         7,
         7,
-        0
+        1
       ],
       "ci": "passing",
       "release": null,
-      "updated": "2026-09-05T09:51:46Z",
-      "stale": false,
-      "featured": false,
-      "url": null
-    },
-    {
-      "name": "nix-cdd",
-      "tagline": "Bare Amazon dev-dsk → full environment in one shot — a from-scratch home-manager rebuild where code is the spec.",
-      "now": "Rebuilding modules from scratch, one per session",
-      "next": "One-shot bootstrap across every host",
-      "tags": [
-        "nix",
-        "home-manager",
-        "dotfiles",
-        "shell"
-      ],
-      "language": "Shell",
-      "total_commits": 182,
-      "recent_commits": 55,
-      "activity_12w": [
-        12,
-        6,
-        15,
-        16,
-        5,
-        1,
-        6,
-        7,
-        6,
-        7,
-        31,
-        0
-      ],
-      "ci": "unknown",
-      "release": null,
-      "updated": "2026-09-03T00:31:43Z",
+      "updated": "2026-09-06T10:08:36Z",
       "stale": false,
       "featured": false,
       "url": null
@@ -119,7 +119,7 @@
       ],
       "language": "Python",
       "total_commits": 555,
-      "recent_commits": 104,
+      "recent_commits": 103,
       "activity_12w": [
         20,
         11,
