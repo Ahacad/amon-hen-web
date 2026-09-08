@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T11:23:24.489503837Z",
+  "generated_at": "2026-09-08T10:27:46.785264876Z",
   "projects": [
     {
       "name": "simledge",
@@ -37,6 +37,41 @@
       "url": null
     },
     {
+      "name": "amon-hen",
+      "tagline": "The Seat of Seeing — a self-refreshing dashboard that watches my active projects.",
+      "now": "Phase 1: collector + renderer",
+      "next": "Promote to profile README; Pages site",
+      "tags": [
+        "rust",
+        "cli",
+        "github-api",
+        "meta"
+      ],
+      "language": "Rust",
+      "total_commits": 66,
+      "recent_commits": 29,
+      "activity_12w": [
+        0,
+        0,
+        8,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        2
+      ],
+      "ci": "passing",
+      "release": null,
+      "updated": "2026-09-07T11:23:48Z",
+      "stale": false,
+      "featured": false,
+      "url": null
+    },
+    {
       "name": "nix-cdd",
       "tagline": "Bare Amazon dev-dsk → full environment in one shot — a from-scratch home-manager rebuild where code is the spec.",
       "now": "Rebuilding modules from scratch, one per session",
@@ -67,41 +102,6 @@
       "ci": "unknown",
       "release": null,
       "updated": "2026-09-07T08:08:30Z",
-      "stale": false,
-      "featured": false,
-      "url": null
-    },
-    {
-      "name": "amon-hen",
-      "tagline": "The Seat of Seeing — a self-refreshing dashboard that watches my active projects.",
-      "now": "Phase 1: collector + renderer",
-      "next": "Promote to profile README; Pages site",
-      "tags": [
-        "rust",
-        "cli",
-        "github-api",
-        "meta"
-      ],
-      "language": "Rust",
-      "total_commits": 65,
-      "recent_commits": 29,
-      "activity_12w": [
-        0,
-        0,
-        8,
-        7,
-        7,
-        7,
-        7,
-        7,
-        7,
-        7,
-        7,
-        1
-      ],
-      "ci": "passing",
-      "release": null,
-      "updated": "2026-09-06T10:08:36Z",
       "stale": false,
       "featured": false,
       "url": null
