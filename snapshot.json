@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T09:57:11.166636026Z",
+  "generated_at": "2026-09-13T10:58:28.412007234Z",
   "projects": [
     {
       "name": "simledge",
@@ -16,7 +16,6 @@
       "total_commits": 489,
       "recent_commits": 0,
       "activity_12w": [
-        87,
         56,
         11,
         20,
@@ -24,6 +23,7 @@
         0,
         2,
         23,
+        0,
         0,
         0,
         0,
@@ -48,10 +48,9 @@
         "meta"
       ],
       "language": "Rust",
-      "total_commits": 70,
+      "total_commits": 71,
       "recent_commits": 29,
       "activity_12w": [
-        0,
         0,
         8,
         7,
@@ -62,11 +61,12 @@
         7,
         7,
         7,
-        6
+        7,
+        0
       ],
       "ci": "passing",
       "release": null,
-      "updated": "2026-09-11T10:29:24Z",
+      "updated": "2026-09-12T09:57:38Z",
       "stale": false,
       "featured": false,
       "url": null
@@ -84,9 +84,8 @@
       ],
       "language": "Shell",
       "total_commits": 209,
-      "recent_commits": 72,
+      "recent_commits": 71,
       "activity_12w": [
-        12,
         6,
         15,
         16,
@@ -97,7 +96,8 @@
         6,
         7,
         53,
-        5
+        5,
+        0
       ],
       "ci": "unknown",
       "release": null,
@@ -119,9 +119,8 @@
       ],
       "language": "Python",
       "total_commits": 555,
-      "recent_commits": 96,
+      "recent_commits": 95,
       "activity_12w": [
-        20,
         11,
         45,
         40,
@@ -132,6 +131,7 @@
         10,
         49,
         34,
+        0,
         0
       ],
       "ci": "unknown",
@@ -155,7 +155,6 @@
       "total_commits": 55,
       "recent_commits": 0,
       "activity_12w": [
-        0,
         44,
         7,
         2,
@@ -163,6 +162,7 @@
         0,
         0,
         2,
+        0,
         0,
         0,
         0,
