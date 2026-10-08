@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T12:30:51.667295035Z",
+  "generated_at": "2026-10-08T12:40:32.170055878Z",
   "projects": [
     {
       "name": "simledge",
@@ -29,7 +29,7 @@
         0,
         0
       ],
-      "ci": "passing",
+      "ci": "failing",
       "release": "v0.8.0",
       "updated": "2026-08-12T10:08:30Z",
       "stale": false,
@@ -48,7 +48,7 @@
         "meta"
       ],
       "language": "Rust",
-      "total_commits": 95,
+      "total_commits": 96,
       "recent_commits": 29,
       "activity_12w": [
         7,
@@ -62,11 +62,11 @@
         7,
         7,
         7,
-        3
+        4
       ],
       "ci": "passing",
       "release": null,
-      "updated": "2026-10-06T12:38:11Z",
+      "updated": "2026-10-07T12:31:11Z",
       "stale": false,
       "featured": false,
       "url": null
