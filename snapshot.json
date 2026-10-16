@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T10:44:46.265532980Z",
+  "generated_at": "2026-10-16T10:33:08.309763761Z",
   "projects": [
     {
       "name": "simledge",
@@ -37,6 +37,41 @@
       "url": null
     },
     {
+      "name": "amon-hen",
+      "tagline": "The Seat of Seeing — a self-refreshing dashboard that watches my active projects.",
+      "now": "Phase 1: collector + renderer",
+      "next": "Promote to profile README; Pages site",
+      "tags": [
+        "rust",
+        "cli",
+        "github-api",
+        "meta"
+      ],
+      "language": "Rust",
+      "total_commits": 104,
+      "recent_commits": 30,
+      "activity_12w": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        5
+      ],
+      "ci": "passing",
+      "release": null,
+      "updated": "2026-10-15T10:45:05Z",
+      "stale": false,
+      "featured": false,
+      "url": null
+    },
+    {
       "name": "nix-cdd",
       "tagline": "Bare Amazon dev-dsk → full environment in one shot — a from-scratch home-manager rebuild where code is the spec.",
       "now": "Rebuilding modules from scratch, one per session",
@@ -49,7 +84,7 @@
       ],
       "language": "Shell",
       "total_commits": 294,
-      "recent_commits": 68,
+      "recent_commits": 65,
       "activity_12w": [
         1,
         6,
@@ -67,41 +102,6 @@
       "ci": "unknown",
       "release": null,
       "updated": "2026-10-14T23:26:37Z",
-      "stale": false,
-      "featured": false,
-      "url": null
-    },
-    {
-      "name": "amon-hen",
-      "tagline": "The Seat of Seeing — a self-refreshing dashboard that watches my active projects.",
-      "now": "Phase 1: collector + renderer",
-      "next": "Promote to profile README; Pages site",
-      "tags": [
-        "rust",
-        "cli",
-        "github-api",
-        "meta"
-      ],
-      "language": "Rust",
-      "total_commits": 103,
-      "recent_commits": 30,
-      "activity_12w": [
-        7,
-        7,
-        7,
-        7,
-        7,
-        7,
-        7,
-        7,
-        7,
-        7,
-        7,
-        4
-      ],
-      "ci": "passing",
-      "release": null,
-      "updated": "2026-10-14T11:01:59Z",
       "stale": false,
       "featured": false,
       "url": null
