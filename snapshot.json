@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T21:44:38.200858567Z",
+  "generated_at": "2026-10-18T22:18:13.986771524Z",
   "projects": [
     {
       "name": "simledge-web",
@@ -49,8 +49,8 @@
         "meta"
       ],
       "language": "Rust",
-      "total_commits": 115,
-      "recent_commits": 38,
+      "total_commits": 116,
+      "recent_commits": 39,
       "activity_12w": [
         7,
         7,
@@ -63,11 +63,11 @@
         7,
         7,
         7,
-        5
+        10
       ],
       "ci": "passing",
       "release": null,
-      "updated": "2026-10-18T21:30:16Z",
+      "updated": "2026-10-18T21:45:28Z",
       "stale": false,
       "featured": false,
       "url": null
@@ -225,7 +225,7 @@
         "shell"
       ],
       "language": "Shell",
-      "total_commits": 300,
+      "total_commits": 301,
       "recent_commits": 60,
       "activity_12w": [
         6,
@@ -239,11 +239,11 @@
         5,
         18,
         12,
-        5
+        6
       ],
       "ci": "unknown",
       "release": null,
-      "updated": "2026-10-18T04:04:50Z",
+      "updated": "2026-10-18T21:43:17Z",
       "stale": false,
       "featured": false,
       "url": null
@@ -355,7 +355,7 @@
         "service": "D1 storage",
         "period": "total",
         "unit": "bytes",
-        "used": 8368128,
+        "used": 8372224,
         "budget": 5000000000,
         "by_project": [
           {
@@ -364,7 +364,7 @@
           },
           {
             "project": "orthanc",
-            "used": 929792
+            "used": 933888
           },
           {
             "project": "simledge-web",
@@ -478,9 +478,13 @@
         "service": "Workers scripts",
         "period": "total",
         "unit": "count",
-        "used": 6,
+        "used": 7,
         "budget": 100,
         "by_project": [
+          {
+            "project": "beacon-watch",
+            "used": 1
+          },
           {
             "project": "conference-tracker",
             "used": 1
@@ -535,6 +539,10 @@
             "used": 1
           },
           {
+            "project": "beacon-watch",
+            "used": 0
+          },
+          {
             "project": "weathertop",
             "used": 0
           }
@@ -574,7 +582,7 @@
           },
           {
             "project": "orthanc",
-            "used": 929792
+            "used": 933888
           },
           {
             "project": "simledge-web",
@@ -670,5 +678,93 @@
     ],
     "stale": false
   },
-  "github": null
+  "github": {
+    "day": "2026-10-17",
+    "quotas": [
+      {
+        "service": "Actions minutes",
+        "period": "month",
+        "unit": "minutes",
+        "used": 50,
+        "budget": 2000,
+        "by_project": [
+          {
+            "project": "ftrack",
+            "used": 23
+          },
+          {
+            "project": "amon-hen",
+            "used": 21
+          },
+          {
+            "project": "other",
+            "used": 4
+          },
+          {
+            "project": "weathertop",
+            "used": 2
+          }
+        ]
+      },
+      {
+        "service": "Actions + Packages storage",
+        "period": "month",
+        "unit": "bytes",
+        "used": 156618,
+        "budget": 500000000,
+        "by_project": [
+          {
+            "project": "other",
+            "used": 156618
+          }
+        ]
+      },
+      {
+        "service": "Packages data transfer",
+        "period": "month",
+        "unit": "bytes",
+        "used": 0,
+        "budget": 1000000000,
+        "by_project": []
+      },
+      {
+        "service": "Git LFS storage",
+        "period": "month",
+        "unit": "bytes",
+        "used": 942951861,
+        "budget": 10000000000,
+        "by_project": [
+          {
+            "project": "other",
+            "used": 942951861
+          }
+        ]
+      },
+      {
+        "service": "Git LFS bandwidth",
+        "period": "month",
+        "unit": "bytes",
+        "used": 0,
+        "budget": 10000000000,
+        "by_project": []
+      },
+      {
+        "service": "Codespaces core-hours",
+        "period": "month",
+        "unit": "hours",
+        "used": 0,
+        "budget": 120,
+        "by_project": []
+      },
+      {
+        "service": "Codespaces storage",
+        "period": "month",
+        "unit": "bytes",
+        "used": 0,
+        "budget": 15000000000,
+        "by_project": []
+      }
+    ],
+    "stale": false
+  }
 }
