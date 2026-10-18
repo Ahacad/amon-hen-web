@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T21:10:21.668605903Z",
+  "generated_at": "2026-10-18T21:44:38.200858567Z",
   "projects": [
     {
       "name": "simledge-web",
@@ -49,8 +49,8 @@
         "meta"
       ],
       "language": "Rust",
-      "total_commits": 113,
-      "recent_commits": 36,
+      "total_commits": 115,
+      "recent_commits": 38,
       "activity_12w": [
         7,
         7,
@@ -67,7 +67,7 @@
       ],
       "ci": "passing",
       "release": null,
-      "updated": "2026-10-18T21:04:35Z",
+      "updated": "2026-10-18T21:30:16Z",
       "stale": false,
       "featured": false,
       "url": null
@@ -473,8 +473,202 @@
             "used": 7987701643
           }
         ]
+      },
+      {
+        "service": "Workers scripts",
+        "period": "total",
+        "unit": "count",
+        "used": 6,
+        "budget": 100,
+        "by_project": [
+          {
+            "project": "conference-tracker",
+            "used": 1
+          },
+          {
+            "project": "ftrack",
+            "used": 1
+          },
+          {
+            "project": "hn-discord-cloudflare-bot",
+            "used": 1
+          },
+          {
+            "project": "orthanc",
+            "used": 1
+          },
+          {
+            "project": "simledge-web",
+            "used": 1
+          },
+          {
+            "project": "weathertop",
+            "used": 1
+          }
+        ]
+      },
+      {
+        "service": "Cron Triggers",
+        "period": "total",
+        "unit": "count",
+        "used": 5,
+        "budget": 5,
+        "by_project": [
+          {
+            "project": "conference-tracker",
+            "used": 1
+          },
+          {
+            "project": "ftrack",
+            "used": 1
+          },
+          {
+            "project": "hn-discord-cloudflare-bot",
+            "used": 1
+          },
+          {
+            "project": "orthanc",
+            "used": 1
+          },
+          {
+            "project": "simledge-web",
+            "used": 1
+          },
+          {
+            "project": "weathertop",
+            "used": 0
+          }
+        ]
+      },
+      {
+        "service": "D1 databases",
+        "period": "total",
+        "unit": "count",
+        "used": 3,
+        "budget": 10,
+        "by_project": [
+          {
+            "project": "ftrack",
+            "used": 1
+          },
+          {
+            "project": "orthanc",
+            "used": 1
+          },
+          {
+            "project": "simledge-web",
+            "used": 1
+          }
+        ]
+      },
+      {
+        "service": "D1 largest database",
+        "period": "total",
+        "unit": "bytes",
+        "used": 7344128,
+        "budget": 500000000,
+        "by_project": [
+          {
+            "project": "ftrack",
+            "used": 7344128
+          },
+          {
+            "project": "orthanc",
+            "used": 929792
+          },
+          {
+            "project": "simledge-web",
+            "used": 94208
+          }
+        ]
+      },
+      {
+        "service": "KV storage",
+        "period": "total",
+        "unit": "bytes",
+        "used": 1410776,
+        "budget": 1000000000,
+        "by_project": [
+          {
+            "project": "conference-tracker",
+            "used": 1371205
+          },
+          {
+            "project": "hn-discord-cloudflare-bot",
+            "used": 39360
+          },
+          {
+            "project": "unbound",
+            "used": 211
+          }
+        ]
+      },
+      {
+        "service": "Durable Objects storage",
+        "period": "total",
+        "unit": "bytes",
+        "used": 0,
+        "budget": 5000000000,
+        "by_project": []
+      },
+      {
+        "service": "Workers Builds minutes",
+        "period": "month",
+        "unit": "minutes",
+        "used": 0,
+        "budget": 3000,
+        "by_project": []
+      },
+      {
+        "service": "Queues operations",
+        "period": "day",
+        "unit": "count",
+        "used": 0,
+        "budget": 10000,
+        "by_project": []
+      },
+      {
+        "service": "Workflows steps",
+        "period": "day",
+        "unit": "count",
+        "used": 0,
+        "budget": 3000,
+        "by_project": []
+      },
+      {
+        "service": "Hyperdrive queries",
+        "period": "day",
+        "unit": "count",
+        "used": 0,
+        "budget": 100000,
+        "by_project": []
+      },
+      {
+        "service": "Vectorize queried dimensions",
+        "period": "month",
+        "unit": "count",
+        "used": 0,
+        "budget": 30000000,
+        "by_project": []
+      },
+      {
+        "service": "Vectorize stored dimensions",
+        "period": "total",
+        "unit": "count",
+        "used": 0,
+        "budget": 5000000,
+        "by_project": []
+      },
+      {
+        "service": "Browser Run time",
+        "period": "day",
+        "unit": "seconds",
+        "used": 0,
+        "budget": 600,
+        "by_project": []
       }
     ],
     "stale": false
-  }
+  },
+  "github": null
 }

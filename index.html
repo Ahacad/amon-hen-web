@@ -234,10 +234,18 @@
 
   <section class="quotas" id="quotas" aria-label="Cloudflare usage against the Workers Free allowances"></section>
 
+  <div class="rule">
+    <h2>GitHub budget</h2>
+    <span class="line"></span>
+    <span class="count" id="ghDay"></span>
+  </div>
+
+  <section class="quotas" id="ghQuotas" aria-label="GitHub usage against the GitHub Free allowances"></section>
+
   <footer class="site-foot">
     <div>
       <div class="how">How the seat sees</div>
-      <p>A Rust CLI reads each repo through the GitHub API and the Cloudflare account's usage once a day, fuses the live numbers with a hand-curated <em>now / next</em>, and rewrites this surface from a single <code>snapshot.json</code>. The daily green run in the Actions tab is the proof it's still watching.</p>
+      <p>A Rust CLI reads each repo through the GitHub API, plus the Cloudflare account's usage and the GitHub billing report, once a day, fuses the live numbers with a hand-curated <em>now / next</em>, and rewrites this surface from a single <code>snapshot.json</code>. The daily green run in the Actions tab is the proof it's still watching.</p>
     </div>
     <div><a class="repo-link" href="https://github.com/Ahacad/amon-hen" target="_blank" rel="noopener">source ↗</a></div>
   </footer>
@@ -350,6 +358,7 @@
   }
 
   // 5440000 -> "5.44M", 7987701643 bytes -> "7.99 GB": three significant digits.
+  const UNIT_SUFFIX = { gb_seconds: " GB-s", seconds: " s", minutes: " min", hours: " h" };
   function fmt(unit, n) {
     const bytes = unit === "bytes";
     const [g, m, k] = bytes ? [" GB", " MB", " kB"] : ["B", "M", "k"];
@@ -359,19 +368,19 @@
     };
     const out = n >= 1e9 ? scale(n / 1e9, g) : n >= 1e6 ? scale(n / 1e6, m) : n >= 1e3 ? scale(n / 1e3, k)
       : String(n) + (bytes ? " B" : "");
-    return unit === "gb_seconds" ? out + " GB-s" : out;
+    return out + (UNIT_SUFFIX[unit] || "");
   }
 
-  function quotaPanel(cf) {
-    const box = document.getElementById("quotas");
-    if (!cf) {
-      box.innerHTML = `<div class="state">No Cloudflare usage in this snapshot.</div>`;
+  function quotaPanel(usage, ids, provider, allowances) {
+    const box = document.getElementById(ids.box);
+    if (!usage) {
+      box.innerHTML = `<div class="state">No ${provider} usage in this snapshot.</div>`;
       return;
     }
-    document.getElementById("cfDay").textContent =
-      `${cf.day} UTC · against the Workers Free allowances${cf.stale ? " · stale" : ""}`;
+    document.getElementById(ids.day).textContent =
+      `${usage.day} UTC · against the ${allowances}${usage.stale ? " · stale" : ""}`;
     const per = { day: " / day", month: " / month", total: "" };
-    box.innerHTML = cf.quotas
+    box.innerHTML = usage.quotas
       .filter(q => q.used > 0)
       .map(q => ({ ...q, pct: (100 * q.used) / q.budget }))
       .sort((a, b) => b.pct - a.pct)
@@ -413,7 +422,8 @@
 
     document.getElementById("landCount").textContent = `${P.length} repos${featured ? ` · ${featured} featured` : ""}`;
     document.getElementById("grid").innerHTML = P.map(card).join("");
-    quotaPanel(snap.cloudflare);
+    quotaPanel(snap.cloudflare, { box: "quotas", day: "cfDay" }, "Cloudflare", "Workers Free allowances");
+    quotaPanel(snap.github, { box: "ghQuotas", day: "ghDay" }, "GitHub", "GitHub Free allowances, month to date");
   }
 
   fetch("./snapshot.json", { cache: "no-cache" })
