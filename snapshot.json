@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T10:01:55.054965556Z",
+  "generated_at": "2026-10-18T08:07:01.790989262Z",
   "projects": [
     {
       "name": "simledge",
@@ -16,9 +16,9 @@
       "total_commits": 489,
       "recent_commits": 0,
       "activity_12w": [
-        0,
         2,
         23,
+        0,
         0,
         0,
         0,
@@ -48,8 +48,8 @@
         "meta"
       ],
       "language": "Rust",
-      "total_commits": 105,
-      "recent_commits": 30,
+      "total_commits": 108,
+      "recent_commits": 32,
       "activity_12w": [
         7,
         7,
@@ -66,7 +66,7 @@
       ],
       "ci": "passing",
       "release": null,
-      "updated": "2026-10-16T10:33:26Z",
+      "updated": "2026-10-18T07:29:15Z",
       "stale": false,
       "featured": false,
       "url": null
@@ -83,10 +83,9 @@
         "shell"
       ],
       "language": "Shell",
-      "total_commits": 294,
-      "recent_commits": 64,
+      "total_commits": 300,
+      "recent_commits": 61,
       "activity_12w": [
-        1,
         6,
         7,
         6,
@@ -97,11 +96,12 @@
         19,
         5,
         18,
-        11
+        12,
+        5
       ],
       "ci": "unknown",
       "release": null,
-      "updated": "2026-10-14T23:26:37Z",
+      "updated": "2026-10-18T04:04:50Z",
       "stale": false,
       "featured": false,
       "url": null
@@ -121,12 +121,12 @@
       "total_commits": 555,
       "recent_commits": 0,
       "activity_12w": [
-        23,
         14,
         10,
         10,
         49,
         34,
+        0,
         0,
         0,
         0,
@@ -156,8 +156,8 @@
       "recent_commits": 0,
       "activity_12w": [
         0,
-        0,
         2,
+        0,
         0,
         0,
         0,
@@ -175,5 +175,233 @@
       "featured": false,
       "url": null
     }
-  ]
+  ],
+  "cloudflare": {
+    "day": "2026-10-17",
+    "quotas": [
+      {
+        "service": "Workers requests",
+        "period": "day",
+        "unit": "count",
+        "used": 1148,
+        "budget": 100000,
+        "by_project": [
+          {
+            "project": "ftrack",
+            "used": 536
+          },
+          {
+            "project": "simledge",
+            "used": 463
+          },
+          {
+            "project": "orthanc",
+            "used": 50
+          },
+          {
+            "project": "conference-tracker",
+            "used": 47
+          },
+          {
+            "project": "hn-discord-cloudflare-bot",
+            "used": 47
+          },
+          {
+            "project": "weathertop",
+            "used": 5
+          }
+        ]
+      },
+      {
+        "service": "Durable Objects requests",
+        "period": "day",
+        "unit": "count",
+        "used": 0,
+        "budget": 100000,
+        "by_project": []
+      },
+      {
+        "service": "Durable Objects rows read",
+        "period": "day",
+        "unit": "count",
+        "used": 0,
+        "budget": 5000000,
+        "by_project": []
+      },
+      {
+        "service": "Durable Objects rows written",
+        "period": "day",
+        "unit": "count",
+        "used": 0,
+        "budget": 100000,
+        "by_project": []
+      },
+      {
+        "service": "Durable Objects duration",
+        "period": "day",
+        "unit": "gb_seconds",
+        "used": 0,
+        "budget": 13000,
+        "by_project": []
+      },
+      {
+        "service": "D1 rows read",
+        "period": "day",
+        "unit": "count",
+        "used": 150341,
+        "budget": 5000000,
+        "by_project": [
+          {
+            "project": "ftrack",
+            "used": 81561
+          },
+          {
+            "project": "orthanc",
+            "used": 68780
+          }
+        ]
+      },
+      {
+        "service": "D1 rows written",
+        "period": "day",
+        "unit": "count",
+        "used": 1465,
+        "budget": 100000,
+        "by_project": [
+          {
+            "project": "orthanc",
+            "used": 1198
+          },
+          {
+            "project": "ftrack",
+            "used": 267
+          }
+        ]
+      },
+      {
+        "service": "D1 storage",
+        "period": "total",
+        "unit": "bytes",
+        "used": 8364032,
+        "budget": 5000000000,
+        "by_project": [
+          {
+            "project": "ftrack",
+            "used": 7344128
+          },
+          {
+            "project": "orthanc",
+            "used": 925696
+          },
+          {
+            "project": "simledge",
+            "used": 94208
+          }
+        ]
+      },
+      {
+        "service": "KV reads",
+        "period": "day",
+        "unit": "count",
+        "used": 8957,
+        "budget": 100000,
+        "by_project": [
+          {
+            "project": "hn-discord-cloudflare-bot",
+            "used": 4906
+          },
+          {
+            "project": "conference-tracker",
+            "used": 4051
+          }
+        ]
+      },
+      {
+        "service": "KV writes",
+        "period": "day",
+        "unit": "count",
+        "used": 23,
+        "budget": 1000,
+        "by_project": [
+          {
+            "project": "hn-discord-cloudflare-bot",
+            "used": 23
+          }
+        ]
+      },
+      {
+        "service": "KV deletes",
+        "period": "day",
+        "unit": "count",
+        "used": 0,
+        "budget": 1000,
+        "by_project": []
+      },
+      {
+        "service": "KV lists",
+        "period": "day",
+        "unit": "count",
+        "used": 0,
+        "budget": 1000,
+        "by_project": []
+      },
+      {
+        "service": "Workers AI neurons",
+        "period": "day",
+        "unit": "count",
+        "used": 223,
+        "budget": 10000,
+        "by_project": [
+          {
+            "project": "orthanc",
+            "used": 223
+          }
+        ]
+      },
+      {
+        "service": "R2 Class A operations",
+        "period": "month",
+        "unit": "count",
+        "used": 5,
+        "budget": 1000000,
+        "by_project": [
+          {
+            "project": "unbound",
+            "used": 3
+          },
+          {
+            "project": "simledge",
+            "used": 2
+          }
+        ]
+      },
+      {
+        "service": "R2 Class B operations",
+        "period": "month",
+        "unit": "count",
+        "used": 2,
+        "budget": 10000000,
+        "by_project": [
+          {
+            "project": "simledge",
+            "used": 2
+          }
+        ]
+      },
+      {
+        "service": "R2 storage",
+        "period": "total",
+        "unit": "bytes",
+        "used": 7987701643,
+        "budget": 10000000000,
+        "by_project": [
+          {
+            "project": "unbound",
+            "used": 7987701643
+          }
+        ]
+      }
+    ],
+    "stale": false
+  }
 }
