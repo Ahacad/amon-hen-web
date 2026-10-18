@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T11:29:56.821199400Z",
+  "generated_at": "2026-10-18T21:10:21.668605903Z",
   "projects": [
     {
       "name": "simledge-web",
@@ -49,8 +49,8 @@
         "meta"
       ],
       "language": "Rust",
-      "total_commits": 111,
-      "recent_commits": 34,
+      "total_commits": 113,
+      "recent_commits": 36,
       "activity_12w": [
         7,
         7,
@@ -67,7 +67,148 @@
       ],
       "ci": "passing",
       "release": null,
-      "updated": "2026-10-18T11:24:50Z",
+      "updated": "2026-10-18T21:04:35Z",
+      "stale": false,
+      "featured": false,
+      "url": null
+    },
+    {
+      "name": "ftrack",
+      "tagline": "A MacroFactor-style nutrition coach in the browser — log fast, weigh in, and let an adaptive engine set next week's targets.",
+      "now": "One-step logging from recent foods on /add",
+      "next": "Favorites and saved meals",
+      "tags": [
+        "typescript",
+        "react",
+        "cloudflare-workers",
+        "d1",
+        "nutrition"
+      ],
+      "language": "TypeScript",
+      "total_commits": 258,
+      "recent_commits": 258,
+      "activity_12w": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        231,
+        2
+      ],
+      "ci": "passing",
+      "release": "v0.3.0",
+      "updated": "2026-10-18T20:18:45Z",
+      "stale": false,
+      "featured": false,
+      "url": null
+    },
+    {
+      "name": "weathertop",
+      "tagline": "A private Chart Room — the US macro tide and the Seattle housing market on one nautical-chart sheet, refreshed daily.",
+      "now": "v2: detail routes, health rows and charts",
+      "next": "Finish the v2 waves and ship v2",
+      "tags": [
+        "typescript",
+        "react",
+        "cloudflare-workers",
+        "etl",
+        "macro"
+      ],
+      "language": "TypeScript",
+      "total_commits": 67,
+      "recent_commits": 67,
+      "activity_12w": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        38,
+        19
+      ],
+      "ci": "passing",
+      "release": null,
+      "updated": "2026-10-18T05:46:46Z",
+      "stale": false,
+      "featured": false,
+      "url": null
+    },
+    {
+      "name": "beacon",
+      "tagline": "Three Discord channels per product — releases, monitoring, tickets — and the code that feeds them.",
+      "now": "Semantic releases: CHANGELOG sections cut from Conventional Commits",
+      "next": "Vendor into every product",
+      "tags": [
+        "typescript",
+        "discord",
+        "github-actions",
+        "cloudflare-workers"
+      ],
+      "language": "TypeScript",
+      "total_commits": 30,
+      "recent_commits": 30,
+      "activity_12w": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        30,
+        0
+      ],
+      "ci": "unknown",
+      "release": null,
+      "updated": "2026-10-17T23:05:37Z",
+      "stale": false,
+      "featured": false,
+      "url": null
+    },
+    {
+      "name": "orthanc",
+      "tagline": "A palantír on Cloudflare's free tier — watches markets & news, alerts to Discord.",
+      "now": "More monitor adapters",
+      "next": "Alert de-duplication & digests",
+      "tags": [
+        "typescript",
+        "cloudflare-workers",
+        "monitoring"
+      ],
+      "language": "TypeScript",
+      "total_commits": 55,
+      "recent_commits": 0,
+      "activity_12w": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ci": "passing",
+      "release": null,
+      "updated": "2026-08-10T08:07:15Z",
       "stale": false,
       "featured": false,
       "url": null
@@ -103,75 +244,6 @@
       "ci": "unknown",
       "release": null,
       "updated": "2026-10-18T04:04:50Z",
-      "stale": false,
-      "featured": false,
-      "url": null
-    },
-    {
-      "name": ".claude",
-      "tagline": "My Claude Code brain — agents, skills, hooks, and the SOUL that shapes how the assistant works.",
-      "now": "Curating agents & skills",
-      "next": "Shareable plugin bundles",
-      "tags": [
-        "claude-code",
-        "dotfiles",
-        "agents",
-        "config"
-      ],
-      "language": "Python",
-      "total_commits": 555,
-      "recent_commits": 0,
-      "activity_12w": [
-        14,
-        10,
-        10,
-        49,
-        34,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "ci": "unknown",
-      "release": null,
-      "updated": "2026-09-01T17:18:11Z",
-      "stale": false,
-      "featured": false,
-      "url": null
-    },
-    {
-      "name": "orthanc",
-      "tagline": "A palantír on Cloudflare's free tier — watches markets & news, alerts to Discord.",
-      "now": "More monitor adapters",
-      "next": "Alert de-duplication & digests",
-      "tags": [
-        "typescript",
-        "cloudflare-workers",
-        "monitoring"
-      ],
-      "language": "TypeScript",
-      "total_commits": 55,
-      "recent_commits": 0,
-      "activity_12w": [
-        0,
-        2,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "ci": "passing",
-      "release": null,
-      "updated": "2026-08-10T08:07:15Z",
       "stale": false,
       "featured": false,
       "url": null
@@ -283,7 +355,7 @@
         "service": "D1 storage",
         "period": "total",
         "unit": "bytes",
-        "used": 8400896,
+        "used": 8368128,
         "budget": 5000000000,
         "by_project": [
           {
@@ -292,7 +364,7 @@
           },
           {
             "project": "orthanc",
-            "used": 962560
+            "used": 929792
           },
           {
             "project": "simledge-web",
