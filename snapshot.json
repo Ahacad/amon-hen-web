@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T08:07:01.790989262Z",
+  "generated_at": "2026-10-18T10:15:20.742760658Z",
   "projects": [
     {
       "name": "simledge",
@@ -48,8 +48,8 @@
         "meta"
       ],
       "language": "Rust",
-      "total_commits": 108,
-      "recent_commits": 32,
+      "total_commits": 109,
+      "recent_commits": 33,
       "activity_12w": [
         7,
         7,
@@ -62,11 +62,11 @@
         7,
         7,
         7,
-        6
+        3
       ],
       "ci": "passing",
       "release": null,
-      "updated": "2026-10-18T07:29:15Z",
+      "updated": "2026-10-18T08:07:20Z",
       "stale": false,
       "featured": false,
       "url": null
@@ -84,7 +84,7 @@
       ],
       "language": "Shell",
       "total_commits": 300,
-      "recent_commits": 61,
+      "recent_commits": 60,
       "activity_12w": [
         6,
         7,
@@ -282,7 +282,7 @@
         "service": "D1 storage",
         "period": "total",
         "unit": "bytes",
-        "used": 8364032,
+        "used": 8400896,
         "budget": 5000000000,
         "by_project": [
           {
@@ -291,7 +291,7 @@
           },
           {
             "project": "orthanc",
-            "used": 925696
+            "used": 962560
           },
           {
             "project": "simledge",
