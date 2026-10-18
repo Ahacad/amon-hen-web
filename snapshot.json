@@ -1,23 +1,22 @@
 {
-  "generated_at": "2026-10-18T10:15:20.742760658Z",
+  "generated_at": "2026-10-18T11:29:56.821199400Z",
   "projects": [
     {
-      "name": "simledge",
-      "tagline": "Own your financial data — a local-first personal-finance TUI.",
-      "now": "Richer TUI layouts",
+      "name": "simledge-web",
+      "tagline": "Own your financial data — a keyboard-driven personal-finance dashboard on my own Cloudflare account.",
+      "now": "Answers cached in the ledger, far under the SQLite row quotas",
       "next": "AI-managed categorization",
       "tags": [
-        "rust",
-        "tui",
-        "fintech",
-        "local-first"
+        "typescript",
+        "react",
+        "cloudflare-workers",
+        "durable-objects",
+        "fintech"
       ],
-      "language": "Rust",
-      "total_commits": 489,
-      "recent_commits": 0,
+      "language": "TypeScript",
+      "total_commits": 569,
+      "recent_commits": 569,
       "activity_12w": [
-        2,
-        23,
         0,
         0,
         0,
@@ -27,11 +26,13 @@
         0,
         0,
         0,
-        0
+        141,
+        414,
+        2
       ],
-      "ci": "failing",
-      "release": "v0.8.0",
-      "updated": "2026-08-12T10:08:30Z",
+      "ci": "passing",
+      "release": "v0.1.0",
+      "updated": "2026-10-18T00:45:45Z",
       "stale": false,
       "featured": true,
       "url": null
@@ -48,8 +49,8 @@
         "meta"
       ],
       "language": "Rust",
-      "total_commits": 109,
-      "recent_commits": 33,
+      "total_commits": 111,
+      "recent_commits": 34,
       "activity_12w": [
         7,
         7,
@@ -62,11 +63,11 @@
         7,
         7,
         7,
-        3
+        5
       ],
       "ci": "passing",
       "release": null,
-      "updated": "2026-10-18T08:07:20Z",
+      "updated": "2026-10-18T11:24:50Z",
       "stale": false,
       "featured": false,
       "url": null
@@ -191,7 +192,7 @@
             "used": 536
           },
           {
-            "project": "simledge",
+            "project": "simledge-web",
             "used": 463
           },
           {
@@ -294,7 +295,7 @@
             "used": 962560
           },
           {
-            "project": "simledge",
+            "project": "simledge-web",
             "used": 94208
           }
         ]
@@ -370,7 +371,7 @@
             "used": 3
           },
           {
-            "project": "simledge",
+            "project": "simledge-web",
             "used": 2
           }
         ]
@@ -383,7 +384,7 @@
         "budget": 10000000,
         "by_project": [
           {
-            "project": "simledge",
+            "project": "simledge-web",
             "used": 2
           }
         ]
