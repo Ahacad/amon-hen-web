@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T12:09:08.920250113Z",
+  "generated_at": "2026-10-30T12:00:09.652888938Z",
   "projects": [
     {
       "name": "simledge-web",
@@ -38,6 +38,42 @@
       "url": null
     },
     {
+      "name": "weathertop",
+      "tagline": "A private Chart Room — the US macro tide and the Seattle housing market on one nautical-chart sheet, refreshed daily.",
+      "now": "v2: detail routes, health rows and charts",
+      "next": "Finish the v2 waves and ship v2",
+      "tags": [
+        "typescript",
+        "react",
+        "cloudflare-workers",
+        "etl",
+        "macro"
+      ],
+      "language": "TypeScript",
+      "total_commits": 202,
+      "recent_commits": 202,
+      "activity_12w": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        38,
+        117,
+        5
+      ],
+      "ci": "failing",
+      "release": "v0.2.0",
+      "updated": "2026-10-30T02:08:05Z",
+      "stale": false,
+      "featured": false,
+      "url": null
+    },
+    {
       "name": "ftrack",
       "tagline": "A MacroFactor-style nutrition coach in the browser — log fast, weigh in, and let an adaptive engine set next week's targets.",
       "now": "One-step logging from recent foods on /add",
@@ -50,7 +86,7 @@
         "nutrition"
       ],
       "language": "TypeScript",
-      "total_commits": 1043,
+      "total_commits": 1087,
       "recent_commits": 1000,
       "activity_12w": [
         0,
@@ -64,47 +100,11 @@
         0,
         231,
         350,
-        437
+        481
       ],
       "ci": "unknown",
-      "release": "v0.10.0",
-      "updated": "2026-10-29T11:46:04Z",
-      "stale": false,
-      "featured": false,
-      "url": null
-    },
-    {
-      "name": "weathertop",
-      "tagline": "A private Chart Room — the US macro tide and the Seattle housing market on one nautical-chart sheet, refreshed daily.",
-      "now": "v2: detail routes, health rows and charts",
-      "next": "Finish the v2 waves and ship v2",
-      "tags": [
-        "typescript",
-        "react",
-        "cloudflare-workers",
-        "etl",
-        "macro"
-      ],
-      "language": "TypeScript",
-      "total_commits": 201,
-      "recent_commits": 201,
-      "activity_12w": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        38,
-        117,
-        4
-      ],
-      "ci": "passing",
-      "release": "v0.2.0",
-      "updated": "2026-10-29T01:56:32Z",
+      "release": "v0.13.1",
+      "updated": "2026-10-29T15:01:59Z",
       "stale": false,
       "featured": false,
       "url": null
@@ -121,7 +121,7 @@
         "meta"
       ],
       "language": "Rust",
-      "total_commits": 127,
+      "total_commits": 128,
       "recent_commits": 39,
       "activity_12w": [
         7,
@@ -135,11 +135,11 @@
         7,
         7,
         17,
-        4
+        5
       ],
       "ci": "passing",
       "release": null,
-      "updated": "2026-10-28T11:59:54Z",
+      "updated": "2026-10-29T12:09:56Z",
       "stale": false,
       "featured": false,
       "url": null
@@ -226,7 +226,7 @@
       ],
       "language": "Shell",
       "total_commits": 315,
-      "recent_commits": 54,
+      "recent_commits": 53,
       "activity_12w": [
         7,
         6,
@@ -250,26 +250,26 @@
     }
   ],
   "cloudflare": {
-    "day": "2026-10-28",
+    "day": "2026-10-29",
     "quotas": [
       {
         "service": "Workers requests",
         "period": "day",
         "unit": "count",
-        "used": 1266,
+        "used": 1507,
         "budget": 100000,
         "by_project": [
           {
+            "project": "btrack",
+            "used": 489
+          },
+          {
             "project": "simledge-web",
-            "used": 435
+            "used": 253
           },
           {
             "project": "ftrack",
             "used": 248
-          },
-          {
-            "project": "btrack",
-            "used": 156
           },
           {
             "project": "weathertop",
@@ -277,19 +277,23 @@
           },
           {
             "project": "mirrormere",
-            "used": 140
+            "used": 143
           },
           {
-            "project": "conference-tracker",
-            "used": 48
-          },
-          {
-            "project": "hn-discord-cloudflare-bot",
-            "used": 47
+            "project": "__unknown__",
+            "used": 89
           },
           {
             "project": "orthanc",
+            "used": 48
+          },
+          {
+            "project": "conference-tracker",
             "used": 47
+          },
+          {
+            "project": "hn-discord-cloudflare-bot",
+            "used": 45
           }
         ]
       },
@@ -297,16 +301,16 @@
         "service": "Durable Objects requests",
         "period": "day",
         "unit": "count",
-        "used": 392,
+        "used": 299,
         "budget": 100000,
         "by_project": [
           {
             "project": "simledge-web",
-            "used": 248
+            "used": 156
           },
           {
             "project": "beacon-watch",
-            "used": 144
+            "used": 143
           }
         ]
       },
@@ -314,12 +318,12 @@
         "service": "Durable Objects rows read",
         "period": "day",
         "unit": "count",
-        "used": 144368,
+        "used": 109753,
         "budget": 5000000,
         "by_project": [
           {
             "project": "simledge-web",
-            "used": 144368
+            "used": 109753
           }
         ]
       },
@@ -327,12 +331,12 @@
         "service": "Durable Objects rows written",
         "period": "day",
         "unit": "count",
-        "used": 790,
+        "used": 697,
         "budget": 100000,
         "by_project": [
           {
             "project": "simledge-web",
-            "used": 790
+            "used": 697
           }
         ]
       },
@@ -340,12 +344,12 @@
         "service": "Durable Objects duration",
         "period": "day",
         "unit": "gb_seconds",
-        "used": 207,
+        "used": 208,
         "budget": 13000,
         "by_project": [
           {
             "project": "beacon-watch",
-            "used": 186
+            "used": 187
           },
           {
             "project": "simledge-web",
@@ -357,24 +361,24 @@
         "service": "D1 rows read",
         "period": "day",
         "unit": "count",
-        "used": 136659,
+        "used": 1452076,
         "budget": 5000000,
         "by_project": [
           {
+            "project": "btrack",
+            "used": 1325869
+          },
+          {
             "project": "ftrack",
-            "used": 70906
+            "used": 65111
           },
           {
             "project": "orthanc",
-            "used": 64572
-          },
-          {
-            "project": "btrack",
-            "used": 902
+            "used": 60895
           },
           {
             "project": "simledge-web",
-            "used": 279
+            "used": 201
           }
         ]
       },
@@ -382,24 +386,24 @@
         "service": "D1 rows written",
         "period": "day",
         "unit": "count",
-        "used": 28189,
+        "used": 12084,
         "budget": 100000,
         "by_project": [
           {
+            "project": "btrack",
+            "used": 6056
+          },
+          {
             "project": "ftrack",
-            "used": 26202
+            "used": 5007
           },
           {
             "project": "orthanc",
-            "used": 1401
-          },
-          {
-            "project": "btrack",
-            "used": 525
+            "used": 1002
           },
           {
             "project": "simledge-web",
-            "used": 61
+            "used": 19
           }
         ]
       },
@@ -407,20 +411,20 @@
         "service": "D1 storage",
         "period": "total",
         "unit": "bytes",
-        "used": 13668352,
+        "used": 13504512,
         "budget": 5000000000,
         "by_project": [
           {
             "project": "ftrack",
-            "used": 10502144
+            "used": 10862592
           },
           {
             "project": "btrack",
-            "used": 2134016
+            "used": 1572864
           },
           {
             "project": "orthanc",
-            "used": 937984
+            "used": 974848
           },
           {
             "project": "simledge-web",
@@ -432,16 +436,16 @@
         "service": "KV reads",
         "period": "day",
         "unit": "count",
-        "used": 9449,
+        "used": 9232,
         "budget": 100000,
         "by_project": [
           {
             "project": "hn-discord-cloudflare-bot",
-            "used": 4891
+            "used": 4734
           },
           {
             "project": "conference-tracker",
-            "used": 3838
+            "used": 3778
           },
           {
             "project": "beacon-watch",
@@ -453,7 +457,7 @@
         "service": "KV writes",
         "period": "day",
         "unit": "count",
-        "used": 36,
+        "used": 34,
         "budget": 1000,
         "by_project": [
           {
@@ -462,7 +466,7 @@
           },
           {
             "project": "conference-tracker",
-            "used": 3
+            "used": 1
           }
         ]
       },
@@ -486,12 +490,12 @@
         "service": "Workers AI neurons",
         "period": "day",
         "unit": "count",
-        "used": 143,
+        "used": 156,
         "budget": 10000,
         "by_project": [
           {
             "project": "orthanc",
-            "used": 143
+            "used": 156
           }
         ]
       },
@@ -499,7 +503,7 @@
         "service": "R2 Class A operations",
         "period": "month",
         "unit": "count",
-        "used": 67836,
+        "used": 67837,
         "budget": 1000000,
         "by_project": [
           {
@@ -512,7 +516,7 @@
           },
           {
             "project": "simledge-web",
-            "used": 14
+            "used": 15
           }
         ]
       },
@@ -520,7 +524,7 @@
         "service": "R2 Class B operations",
         "period": "month",
         "unit": "count",
-        "used": 35153,
+        "used": 35354,
         "budget": 10000000,
         "by_project": [
           {
@@ -529,11 +533,11 @@
           },
           {
             "project": "btrack",
-            "used": 1357
+            "used": 1486
           },
           {
             "project": "simledge-web",
-            "used": 795
+            "used": 867
           }
         ]
       },
@@ -541,7 +545,7 @@
         "service": "R2 storage",
         "period": "total",
         "unit": "bytes",
-        "used": 105321434,
+        "used": 105414720,
         "budget": 10000000000,
         "by_project": [
           {
@@ -550,7 +554,7 @@
           },
           {
             "project": "simledge-web",
-            "used": 1076665
+            "used": 1169951
           }
         ]
       },
@@ -673,20 +677,20 @@
         "service": "D1 largest database",
         "period": "total",
         "unit": "bytes",
-        "used": 10502144,
+        "used": 10862592,
         "budget": 500000000,
         "by_project": [
           {
             "project": "ftrack",
-            "used": 10502144
+            "used": 10862592
           },
           {
             "project": "btrack",
-            "used": 2134016
+            "used": 1572864
           },
           {
             "project": "orthanc",
-            "used": 937984
+            "used": 974848
           },
           {
             "project": "simledge-web",
@@ -698,12 +702,12 @@
         "service": "KV storage",
         "period": "total",
         "unit": "bytes",
-        "used": 1435750,
+        "used": 1436161,
         "budget": 1000000000,
         "by_project": [
           {
             "project": "conference-tracker",
-            "used": 1391375
+            "used": 1391786
           },
           {
             "project": "hn-discord-cloudflare-bot",
@@ -719,12 +723,12 @@
         "service": "Durable Objects storage",
         "period": "total",
         "unit": "bytes",
-        "used": 995328,
+        "used": 1003520,
         "budget": 5000000000,
         "by_project": [
           {
             "project": "simledge-web",
-            "used": 978944
+            "used": 987136
           },
           {
             "project": "beacon-watch",
@@ -792,30 +796,30 @@
     "stale": false
   },
   "github": {
-    "day": "2026-10-28",
+    "day": "2026-10-29",
     "quotas": [
       {
         "service": "Actions minutes",
         "period": "month",
         "unit": "minutes",
-        "used": 815,
+        "used": 977,
         "budget": 2000,
         "by_project": [
           {
-            "project": "weathertop",
-            "used": 296
+            "project": "other",
+            "used": 328
           },
           {
-            "project": "other",
-            "used": 243
+            "project": "weathertop",
+            "used": 311
           },
           {
             "project": "ftrack",
-            "used": 152
+            "used": 209
           },
           {
             "project": "amon-hen",
-            "used": 105
+            "used": 110
           },
           {
             "project": "simledge-web",
@@ -827,16 +831,16 @@
         "service": "Actions + Packages storage",
         "period": "month",
         "unit": "bytes",
-        "used": 609704,
+        "used": 630429,
         "budget": 500000000,
         "by_project": [
           {
             "project": "weathertop",
-            "used": 381721
+            "used": 396128
           },
           {
             "project": "other",
-            "used": 227983
+            "used": 234301
           }
         ]
       },
@@ -852,12 +856,12 @@
         "service": "Git LFS storage",
         "period": "month",
         "unit": "bytes",
-        "used": 1556102825,
+        "used": 1611843822,
         "budget": 10000000000,
         "by_project": [
           {
             "project": "other",
-            "used": 1556102825
+            "used": 1611843822
           }
         ]
       },
